@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BATU - University Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo-container">
+      <h2 class="logo">BATU</h2>
+      </div>
+      <ul class="menu">
+        <li class="active" data-section="home">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </li>
+        <li data-section="courses">
+          <i class="fas fa-book"></i>
+          <span>Courses</span>
+        </li>
+        <li data-section="profile">
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
+        </li>
+        <li data-section="trainings">
+          <i class="fas fa-graduation-cap"></i>
+          <span>Trainings</span>
+        </li>
+        <li data-section="results">
+          <i class="fas fa-chart-bar"></i>
+          <span>Results</span>
+        </li>
+        <li data-section="assignments">
+          <i class="fas fa-tasks"></i>
+          <span>Assignments</span>
+        </li>
+        <li class="logout" data-section="logout">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+        <h1>Dashboard</h1>
+        </div>
+        <div class="user-info">
+          <div class="notifications">
+            <i class="fas fa-bell"></i>
+            <span class="badge">3</span>
+          </div>
+          <span>Welcome, Youssef</span>
+          <div class="avatar-container">
+            <img src="https://ui-avatars.com/api/?name=Youssef&background=0D8ABC&color=fff" alt="User Avatar" class="avatar">
+          </div>
+        </div>
+      </header>
+
+      <!-- Sections -->
+      <section class="content section" id="home">
+        <div class="dashboard-header">
+          <h2>Welcome to your Dashboard</h2>
+          <p>Track your academic progress and manage your university activities</p>
+        </div>
+        
+        <div class="stats-container">
+          <div class="stat-card">
+            <div class="stat-icon blue">
+              <i class="fas fa-book"></i>
+            </div>
+            <div class="stat-info">
+              <h3>6</h3>
+              <p>Active Courses</p>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon green">
+              <i class="fas fa-tasks"></i>
+            </div>
+            <div class="stat-info">
+              <h3>4</h3>
+              <p>Pending Assignments</p>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon purple">
+              <i class="fas fa-calendar"></i>
+            </div>
+            <div class="stat-info">
+              <h3>2</h3>
+              <p>Upcoming Exams</p>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon orange">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="stat-info">
+              <h3>A-</h3>
+              <p>GPA</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cards-container">
+          <div class="card announcements">
+            <div class="card-header">
+              <h3><i class="fas fa-bullhorn"></i> Announcements</h3>
+              <a href="#" class="view-all">View All</a>
+            </div>
+            <div class="card-content">
+              <div class="announcement-item">
+                <h4>Mid-term Exam Schedule</h4>
+                <p>The mid-term exam schedule has been posted. Please check your course pages.</p>
+                <span class="date">1 day ago</span>
+              </div>
+              <div class="announcement-item">
+                <h4>Library Hours Extended</h4>
+                <p>The university library will now be open until 10 PM on weekdays.</p>
+                <span class="date">3 days ago</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card recent-courses">
+            <div class="card-header">
+              <h3><i class="fas fa-clock"></i> Recent Courses</h3>
+              <a href="#" class="view-all">View All</a>
+            </div>
+            <div class="card-content">
+              <div class="course-item">
+                <div class="course-icon web">
+                  <i class="fas fa-globe"></i>
+                </div>
+                <div class="course-info">
+                  <h4>Web Development</h4>
+                  <div class="progress-container">
+                    <div class="progress-bar" style="width: 85%"></div>
+                  </div>
+                  <span class="progress-text">85% Complete</span>
+                </div>
+              </div>
+              <div class="course-item">
+                <div class="course-icon cpp">
+                  <i class="fas fa-code"></i>
+                </div>
+                <div class="course-info">
+                  <h4>C++ Programming</h4>
+                  <div class="progress-container">
+                    <div class="progress-bar" style="width: 70%"></div>
+                  </div>
+                  <span class="progress-text">70% Complete</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content section" id="profile" style="display: none;">
+        <div class="section-header">
+          <h2><i class="fas fa-user"></i> Profile Information</h2>
+          <p>Manage your personal information and account settings</p>
+        </div>
+        
+        <div class="profile-container">
+        <div class="card profile-card">
+            <!-- User profile information -->
+          <div class="profile-header">
+              <div class="profile-avatar">
+                <img src="https://ui-avatars.com/api/?name=Youssef+Elkawaga&background=0D8ABC&color=fff&size=128" alt="Profile Picture" class="profile-img">
+                <div class="avatar-overlay">
+                  <i class="fas fa-camera"></i>
+                </div>
+              </div>
+              <div class="profile-info">
+                <h2>Youssef Elkawaga</h2>
+                <p><i class="fas fa-id-card"></i> Student ID: 2330747</p>
+                <p><i class="fas fa-calendar-alt"></i> Account created: Dec 18, 2024</p>
+            </div>
+          </div>
+      
+            <!-- Upload Photo -->
+          <div class="upload-section">
+              <input type="file" id="file-upload" hidden>
+              <label for="file-upload" class="upload-btn">
+                <i class="fas fa-upload"></i> Update Profile Picture
+              </label>
+          </div>
+      
+          <hr class="divider">
+      
+            <!-- General Information -->
+            <div class="profile-section">
+              <h3><i class="fas fa-info-circle"></i> General Information</h3>
+          <form class="profile-form">
+                <div class="form-group">
+                  <label for="fullname">Full Name</label>
+                  <input type="text" id="fullname" value="Youssef Elkawaga">
+                </div>
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" value="+01204119977">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" value="youssef.elkawaga@batechu.com">
+                  </div>
+                </div>
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="department">Department</label>
+                    <input type="text" id="department" value="Computer Science">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="year">Academic Year</label>
+                    <select id="year">
+                      <option value="1">First Year</option>
+                      <option value="2" selected>Second Year</option>
+                      <option value="3">Third Year</option>
+                      <option value="4">Fourth Year</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <button type="button" class="btn save-btn">
+                  <i class="fas fa-save"></i> Save Information
+                </button>
+          </form>
+            </div>
+      
+          <hr class="divider">
+      
+            <!-- Change Password -->
+            <div class="profile-section">
+              <h3><i class="fas fa-lock"></i> Change Password</h3>
+          <form class="profile-form">
+                <div class="form-group">
+                  <label for="current-password">Current Password</label>
+                  <div class="password-input">
+                    <input type="password" id="current-password">
+                    <i class="fas fa-eye toggle-password"></i>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="new-password">New Password</label>
+                  <div class="password-input">
+                    <input type="password" id="new-password">
+                    <i class="fas fa-eye toggle-password"></i>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="confirm-password">Confirm New Password</label>
+                  <div class="password-input">
+                    <input type="password" id="confirm-password">
+                    <i class="fas fa-eye toggle-password"></i>
+                  </div>
+                </div>
+                
+                <div class="password-strength">
+                  <div class="strength-meter">
+                    <div class="strength-segment"></div>
+                    <div class="strength-segment"></div>
+                    <div class="strength-segment"></div>
+                    <div class="strength-segment"></div>
+                  </div>
+                  <span class="strength-text">Password Strength: Medium</span>
+                </div>
+                
+                <button type="button" class="btn password-btn">
+                  <i class="fas fa-key"></i> Update Password
+                </button>
+          </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content section" id="results" style="display: none;">
+        <div class="section-header">
+          <h2><i class="fas fa-chart-bar"></i> Academic Results</h2>
+          <p>View your grades and academic performance</p>
+        </div>
+        
+        <div class="card">
+          <div class="results-header">
+            <div class="semester-selector">
+              <label for="semester">Select Semester:</label>
+              <select id="semester">
+                <option value="current">Current Semester</option>
+                <option value="previous">Previous Semester</option>
+                <option value="all">All Semesters</option>
+              </select>
+            </div>
+            
+            <div class="gpa-display">
+              <div class="gpa-circle">
+                <span class="gpa-value">3.7</span>
+              </div>
+              <div class="gpa-label">GPA</div>
+            </div>
+          </div>
+          
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credits</th>
+                <th>Grade</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>MATH201</td>
+                <td>Mathematics</td>
+                <td>3</td>
+                <td>A</td>
+                <td><span class="status passed">Passed</span></td>
+              </tr>
+              <tr>
+                <td>SCI101</td>
+                <td>Science</td>
+                <td>4</td>
+                <td>B+</td>
+                <td><span class="status passed">Passed</span></td>
+              </tr>
+              <tr>
+                <td>ENG102</td>
+                <td>English</td>
+                <td>2</td>
+                <td>A</td>
+                <td><span class="status passed">Passed</span></td>
+              </tr>
+              <tr>
+                <td>OS220</td>
+                <td>Linux</td>
+                <td>3</td>
+                <td>A+</td>
+                <td><span class="status passed">Passed</span></td>
+              </tr>
+              <tr>
+                <td>CS201</td>
+                <td>C++ Programming</td>
+                <td>4</td>
+                <td>A</td>
+                <td><span class="status passed">Passed</span></td>
+              </tr>
+              <tr>
+                <td>WEB101</td>
+                <td>Web Development</td>
+                <td>3</td>
+                <td>A</td>
+                <td><span class="status passed">Passed</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Result Summary -->
+          <div class="result-summary">
+            <div class="summary-item">
+              <span class="summary-label">Total Credits:</span>
+              <span class="summary-value">19</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Courses Passed:</span>
+              <span class="summary-value">6/6</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Status:</span>
+              <span class="summary-value success">Excellent</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="content section" id="courses" style="display: none;">
+        <div class="section-header">
+          <h2><i class="fas fa-book"></i> My Courses</h2>
+          <p>View and manage your enrolled courses</p>
+        </div>
+        
+        <div class="courses-container">
+          <div class="course-card">
+            <div class="course-banner web-dev"></div>
+            <div class="course-content">
+              <h3>Web Development</h3>
+              <p class="instructor">Dr. Ahmed Hassan</p>
+              <div class="course-details">
+                <span><i class="fas fa-calendar"></i> Mon, Wed</span>
+                <span><i class="fas fa-clock"></i> 10:00 - 11:30</span>
+              </div>
+              <div class="progress-container">
+                <div class="progress-bar" style="width: 85%"></div>
+              </div>
+              <div class="course-footer">
+                <span class="progress-text">85% Complete</span>
+                <a href="#" class="btn course-btn">View Course</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="course-card">
+            <div class="course-banner cpp"></div>
+            <div class="course-content">
+              <h3>C++ Programming</h3>
+              <p class="instructor">Dr. Mohammed Ali</p>
+              <div class="course-details">
+                <span><i class="fas fa-calendar"></i> Tue, Thu</span>
+                <span><i class="fas fa-clock"></i> 1:00 - 2:30</span>
+              </div>
+              <div class="progress-container">
+                <div class="progress-bar" style="width: 70%"></div>
+              </div>
+              <div class="course-footer">
+                <span class="progress-text">70% Complete</span>
+                <a href="#" class="btn course-btn">View Course</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="course-card">
+            <div class="course-banner db"></div>
+            <div class="course-content">
+              <h3>Database Systems</h3>
+              <p class="instructor">Dr. Sara Mohammed</p>
+              <div class="course-details">
+                <span><i class="fas fa-calendar"></i> Mon, Wed</span>
+                <span><i class="fas fa-clock"></i> 2:00 - 3:30</span>
+              </div>
+              <div class="progress-container">
+                <div class="progress-bar" style="width: 60%"></div>
+              </div>
+              <div class="course-footer">
+                <span class="progress-text">60% Complete</span>
+                <a href="#" class="btn course-btn">View Course</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="content section" id="trainings" style="display: none;">
+        <div class="section-header">
+          <h2><i class="fas fa-graduation-cap"></i> Trainings</h2>
+          <p>Explore training opportunities and workshops</p>
+        </div>
+        
+        <div class="trainings-container">
+          <div class="training-card">
+            <div class="training-badge">Active</div>
+            <div class="training-header">
+              <i class="fas fa-laptop-code"></i>
+              <h3>Web App Development Workshop</h3>
+            </div>
+            <div class="training-details">
+              <p><i class="fas fa-calendar-alt"></i> Duration: 4 weeks</p>
+              <p><i class="fas fa-clock"></i> Schedule: Sat, 10:00 AM - 2:00 PM</p>
+              <p><i class="fas fa-map-marker-alt"></i> Location: Lab 5, Building B</p>
+            </div>
+            <div class="training-footer">
+              <p class="training-status">Progress: 2/4 weeks completed</p>
+              <a href="#" class="btn training-btn">View Details</a>
+            </div>
+          </div>
+          
+          <div class="training-card upcoming">
+            <div class="training-badge upcoming">Upcoming</div>
+            <div class="training-header">
+              <i class="fas fa-mobile-alt"></i>
+              <h3>Mobile App Development</h3>
+            </div>
+            <div class="training-details">
+              <p><i class="fas fa-calendar-alt"></i> Duration: 6 weeks</p>
+              <p><i class="fas fa-clock"></i> Schedule: Sun, 1:00 PM - 4:00 PM</p>
+              <p><i class="fas fa-map-marker-alt"></i> Location: Online (Zoom)</p>
+            </div>
+            <div class="training-footer">
+              <p class="training-status">Starts in: 2 weeks</p>
+              <a href="#" class="btn training-btn">Register</a>
+            </div>
+          </div>
+          
+          <div class="training-card completed">
+            <div class="training-badge completed">Completed</div>
+            <div class="training-header">
+              <i class="fas fa-database"></i>
+              <h3>SQL Database Course</h3>
+            </div>
+            <div class="training-details">
+              <p><i class="fas fa-calendar-alt"></i> Duration: 3 weeks</p>
+              <p><i class="fas fa-clock"></i> Schedule: Tue & Thu, 5:00 PM - 7:00 PM</p>
+              <p><i class="fas fa-map-marker-alt"></i> Location: Lab 2, Building A</p>
+            </div>
+            <div class="training-footer">
+              <p class="training-status">Completed on: Oct 15, 2023</p>
+              <a href="#" class="btn training-btn completed">Certificate</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="content section" id="assignments" style="display: none;">
+        <div class="section-header">
+          <h2><i class="fas fa-tasks"></i> Assignments</h2>
+          <p>Manage your assignments and submissions</p>
+        </div>
+        
+        <div class="tabs">
+          <div class="tab active" data-tab="pending">Pending (4)</div>
+          <div class="tab" data-tab="submitted">Submitted (2)</div>
+          <div class="tab" data-tab="graded">Graded (5)</div>
+        </div>
+        
+        <div class="tab-content active" id="pending-tab">
+          <div class="assignment-card urgent">
+            <div class="assignment-status urgent">Due Soon</div>
+            <div class="assignment-content">
+              <h3>Web Development - Final Project</h3>
+              <p>Create a responsive dashboard using HTML, CSS, and JavaScript.</p>
+              <div class="assignment-details">
+                <span><i class="fas fa-clock"></i> Due: Tomorrow, 11:59 PM</span>
+                <span><i class="fas fa-file"></i> PDF, ZIP</span>
+              </div>
+            </div>
+            <div class="assignment-actions">
+              <a href="#" class="btn assignment-btn">Submit</a>
+            </div>
+          </div>
+          
+          <div class="assignment-card">
+            <div class="assignment-status">Pending</div>
+            <div class="assignment-content">
+              <h3>C++ Programming - Lab Report</h3>
+              <p>Complete the lab report for inheritance and polymorphism.</p>
+              <div class="assignment-details">
+                <span><i class="fas fa-clock"></i> Due: 3 days left</span>
+                <span><i class="fas fa-file"></i> DOC, PDF</span>
+              </div>
+            </div>
+            <div class="assignment-actions">
+              <a href="#" class="btn assignment-btn">Submit</a>
+            </div>
+          </div>
+          
+          <div class="assignment-card">
+            <div class="assignment-status">Pending</div>
+            <div class="assignment-content">
+              <h3>Database Systems - ER Diagram</h3>
+              <p>Design an Entity-Relationship diagram for the university database.</p>
+              <div class="assignment-details">
+                <span><i class="fas fa-clock"></i> Due: 5 days left</span>
+                <span><i class="fas fa-file"></i> PDF, IMG</span>
+              </div>
+            </div>
+            <div class="assignment-actions">
+              <a href="#" class="btn assignment-btn">Submit</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-content" id="submitted-tab" style="display: none;">
+          <!-- Submitted assignments would go here -->
+        </div>
+        
+        <div class="tab-content" id="graded-tab" style="display: none;">
+          <!-- Graded assignments would go here -->
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <!-- JavaScript -->
+  <script>
+    // Section navigation
+    const menuItems = document.querySelectorAll(".menu li");
+    const sections = document.querySelectorAll(".section");
+
+    menuItems.forEach(item => {
+      item.addEventListener("click", () => {
+        const target = item.getAttribute("data-section");
+
+        // Active menu
+        menuItems.forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
+
+        // Show only target section
+        sections.forEach(section => {
+          section.style.display = section.id === target ? "block" : "none";
+        });
+      });
+    });
+    
+    // Assignment tabs
+    const tabs = document.querySelectorAll(".tab");
+    const tabContents = document.querySelectorAll(".tab-content");
+    
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        const target = tab.getAttribute("data-tab");
+        
+        // Active tab
+        tabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+        
+        // Show target tab content
+        tabContents.forEach(content => {
+          content.style.display = content.id === `${target}-tab` ? "block" : "none";
+        });
+      });
+    });
+    
+    // Password toggle visibility
+    const toggleBtns = document.querySelectorAll(".toggle-password");
+    
+    toggleBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const input = btn.previousElementSibling;
+        if (input.type === "password") {
+          input.type = "text";
+          btn.classList.replace("fa-eye", "fa-eye-slash");
+        } else {
+          input.type = "password";
+          btn.classList.replace("fa-eye-slash", "fa-eye");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
